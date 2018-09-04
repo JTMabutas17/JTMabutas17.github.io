@@ -92,9 +92,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppModule", function() { return AppModule; });
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var _nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nav-bar/nav-bar.component */ "./src/app/nav-bar/nav-bar.component.ts");
-/* harmony import */ var _cover_page_cover_page_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./cover-page/cover-page.component */ "./src/app/cover-page/cover-page.component.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./nav-bar/nav-bar.component */ "./src/app/nav-bar/nav-bar.component.ts");
+/* harmony import */ var _cover_page_cover_page_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./cover-page/cover-page.component */ "./src/app/cover-page/cover-page.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -106,21 +107,23 @@ var __decorate = (undefined && undefined.__decorate) || function (decorators, ta
 
 
 
+
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["NgModule"])({
             declarations: [
-                _app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"],
-                _nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_3__["NavBarComponent"],
-                _cover_page_cover_page_component__WEBPACK_IMPORTED_MODULE_4__["CoverPageComponent"]
+                _app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"],
+                _nav_bar_nav_bar_component__WEBPACK_IMPORTED_MODULE_4__["NavBarComponent"],
+                _cover_page_cover_page_component__WEBPACK_IMPORTED_MODULE_5__["CoverPageComponent"]
             ],
             imports: [
-                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"]
+                _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClientModule"],
             ],
             providers: [],
-            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_2__["AppComponent"]]
+            bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_3__["AppComponent"]]
         })
     ], AppModule);
     return AppModule;
@@ -137,7 +140,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/*\r\n * Globals\r\n */\r\n\r\n/* Links */\r\n\r\na,\r\na:focus,\r\na:hover {\r\n  color: #fff;\r\n}\r\n\r\n/* Custom default button */\r\n\r\n.btn-secondary,\r\n.btn-secondary:hover,\r\n.btn-secondary:focus {\r\n  color: #333;\r\n  text-shadow: none; /* Prevent inheritance from `body` */\r\n  background-color: #fff;\r\n  border: .05rem solid #fff;\r\n}\r\n\r\n/*\r\n * Base structure\r\n */\r\n\r\n.cover-page {\r\n    background: url(\"Charcoal_Profile.JPG\") no-repeat fixed;\r\n    background-size: contain;\r\n    background-position: center;\r\n    height: 100vh;\r\n    background-color: #333;\r\n    display: flex;\r\n    color: #fff;\r\n    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);\r\n    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);\r\n}\r\n\r\n.cover-container {\r\n  max-width: 42em;\r\n}\r\n\r\n/*\r\n * Main\r\n */\r\n\r\n.main-section {\r\n  font-family: \"Impact\";\r\n}\r\n\r\n/*\r\n * Header\r\n */\r\n\r\n.masthead {\r\n  margin-bottom: 2rem;\r\n}\r\n\r\n.masthead-brand {\r\n  margin-bottom: 0;\r\n}\r\n\r\n.nav-masthead .nav-link {\r\n  padding: .25rem 0;\r\n  font-weight: 700;\r\n  color: rgba(255, 255, 255, .5);\r\n  background-color: transparent;\r\n  border-bottom: .25rem solid transparent;\r\n}\r\n\r\n.nav-masthead .nav-link:hover,\r\n.nav-masthead .nav-link:focus {\r\n  border-bottom-color: rgba(255, 255, 255, .25);\r\n}\r\n\r\n.nav-masthead .nav-link + .nav-link {\r\n  margin-left: 1rem;\r\n}\r\n\r\n.nav-masthead .active {\r\n  color: #fff;\r\n  border-bottom-color: #fff;\r\n}\r\n\r\n@media (min-width: 48em) {\r\n  .masthead-brand {\r\n    float: left;\r\n  }\r\n  .nav-masthead {\r\n    float: right;\r\n  }\r\n}\r\n\r\n/*\r\n * Cover\r\n */\r\n\r\n.cover {\r\n  padding: 0 1.5rem;\r\n}\r\n\r\n.cover .btn-lg {\r\n  padding: .75rem 1.25rem;\r\n  font-weight: 700;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n\r\n#footer {\r\n  text-align: center;\r\n}\r\n"
+module.exports = "/*\r\n * Globals\r\n */\r\n\r\n/* Links */\r\n\r\na,\r\na:focus,\r\na:hover {\r\n  color: #fff;\r\n}\r\n\r\n/* Custom default button */\r\n\r\n.btn-secondary,\r\n.btn-secondary:hover,\r\n.btn-secondary:focus {\r\n  color: #333;\r\n  text-shadow: none; /* Prevent inheritance from `body` */\r\n  background-color: #fff;\r\n  border: .05rem solid #fff;\r\n}\r\n\r\n/*\r\n * Base structure\r\n */\r\n\r\n.cover-page {\r\n    background: url(\"Charcoal_Profile.JPG\") no-repeat fixed;\r\n    background-size: contain;\r\n    background-position: center;\r\n    height: 100vh;\r\n    background-color: #333;\r\n    display: flex;\r\n    color: #fff;\r\n    text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);\r\n    box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);\r\n}\r\n\r\n/*\r\n * Quote box\r\n */\r\n\r\n#QuoteBox {\r\n   font-size: 40px;\r\n   /* font-size: 10vh; */\r\n   /* width: 40vw; */\r\n }\r\n\r\n.cover-container {\r\n  max-width: 42em;\r\n}\r\n\r\n/*\r\n * Main\r\n */\r\n\r\n.main-section {\r\n  font-family: \"Impact\";\r\n  font-size: 1px;\r\n}\r\n\r\n/*\r\n * Header\r\n */\r\n\r\n.masthead {\r\n  margin-bottom: 2rem;\r\n}\r\n\r\n.masthead-brand {\r\n  margin-bottom: 0;\r\n}\r\n\r\n.nav-masthead .nav-link {\r\n  padding: .25rem 0;\r\n  font-weight: 700;\r\n  color: rgba(255, 255, 255, .5);\r\n  background-color: transparent;\r\n  border-bottom: .25rem solid transparent;\r\n}\r\n\r\n.nav-masthead .nav-link:hover,\r\n.nav-masthead .nav-link:focus {\r\n  border-bottom-color: rgba(255, 255, 255, .25);\r\n}\r\n\r\n.nav-masthead .nav-link + .nav-link {\r\n  margin-left: 1rem;\r\n}\r\n\r\n.nav-masthead .active {\r\n  color: #fff;\r\n  border-bottom-color: #fff;\r\n}\r\n\r\n@media (min-width: 48em) {\r\n  .masthead-brand {\r\n    float: left;\r\n  }\r\n  .nav-masthead {\r\n    float: right;\r\n  }\r\n}\r\n\r\n/*\r\n * Cover\r\n */\r\n\r\n.cover {\r\n  padding: 0 1.5rem;\r\n}\r\n\r\n.cover .btn-lg {\r\n  padding: .75rem 1.25rem;\r\n  font-weight: 700;\r\n}\r\n\r\n/*\r\n * Footer\r\n */\r\n\r\n#footer {\r\n  text-align: center;\r\n}\r\n"
 
 /***/ }),
 
@@ -148,7 +151,7 @@ module.exports = "/*\r\n * Globals\r\n */\r\n\r\n/* Links */\r\n\r\na,\r\na:focu
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"cover-page\">\n  <div class=\"cover-container d-flex w-100 h-100 p-3 mx-auto flex-column\">\n    <header class=\"masthead mb-auto\">\n      <div class=\"inner\">\n        <h3 class=\"masthead-brand\">Justin Mabutas</h3>\n      </div>\n        <nav class=\"nav nav-masthead justify-content-center\">\n          <a class=\"nav-link\" href=\"#\">Home</a>\n          <a class=\"nav-link\" href=\"#\">Features</a>\n          <a class=\"nav-link\" href=\"#\">Contact</a>\n        </nav>\n    </header>\n\n    <main role=\"main\" class=\"inner cover main-section\">\n      <h1 class=\"cover-heading\">{{motivational_phrase}}</h1>\n      <!-- <p class=\"lead\">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p> -->\n      <p class=\"lead\">\n        <!-- <a href=\"#\" class=\"btn btn-lg btn-secondary\" (click)=\"changeMotivationalPhrase()\">Get motivated!</a> -->\n        <button id=\"getMotivated\" type=\"button\" class=\"btn btn-lg btn-secondary\" (click)=\"changeMotivationalPhrase()\">Get Motivated!</button>\n      </p>\n    </main>\n\n\n    <footer class=\"mt-auto\" id=\"footer\">\n      <p>\n        Email: <a href=\"mailto:justin.troy.mabutas@gmail.com\">Justin.Mabutas@contact.me</a>\n        <br>\n        Phone: (408)515-9400\n        <br>\n        Unofficial Website for Justin Mabutas\n      </p>\n    </footer>\n  </div>\n</div>\n"
+module.exports = "<div class=\"cover-page\">\n  <div class=\"cover-container d-flex w-100 h-100 p-3 mx-auto flex-column\">\n    <header class=\"masthead mb-auto\">\n      <div class=\"inner\">\n        <h3 class=\"masthead-brand\">Justin Mabutas</h3>\n      </div>\n        <!-- <nav class=\"nav nav-masthead justify-content-center\">\n          <a class=\"nav-link\" href=\"#\">Home</a>\n          <a class=\"nav-link\" href=\"#\">Features</a>\n          <a class=\"nav-link\" href=\"#\">Contact</a>\n        </nav> -->\n    </header>\n\n    <main role=\"main\" class=\"inner cover main-section\">\n      <h1 class=\"cover-heading\" id=\"QuoteBox\">{{motivational_phrase}}</h1>\n      <h3 class=\"cover-heading\">{{motivational_author}}</h3>\n      <button id=\"getMotivated\" type=\"button\" class=\"btn btn-lg btn-secondary\" (click)=\"changeMotivationalPhrase()\">Get Motivated!</button>\n    </main>\n\n\n    <footer class=\"mt-auto\" id=\"footer\">\n      <p>\n        Email: <a href=\"mailto:justin.troy.mabutas@gmail.com\">Justin.Mabutas@contact.me</a>\n        <br>\n        Phone: (408)515-9400\n        <br>\n        Unofficial Website for Justin Mabutas\n      </p>\n    </footer>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -163,6 +166,8 @@ module.exports = "<div class=\"cover-page\">\n  <div class=\"cover-container d-f
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CoverPageComponent", function() { return CoverPageComponent; });
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -173,38 +178,12 @@ var __metadata = (undefined && undefined.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 
+
 var CoverPageComponent = /** @class */ (function () {
     function CoverPageComponent() {
         this.motivational_phrase = "Welcome to my website!";
-        this.phrases = [
-            "You're going to kill it today.",
-            "Think outside of the box.",
-            "This is your moment.",
-            "The issue you are facing is not insurmountable.",
-            "You are surrounded by a smart team to help you achieve great success.",
-            "Dig hard, and you will find the right answer.",
-            "You are the only person with your exact blend of talents and skills.",
-            "Even if you fail today, you will learn.",
-            "Each day is an opportunity.",
-            "The sky is the limit!",
-        ];
+        this.motivational_author = "";
     }
-    CoverPageComponent.prototype.changeMotivationalPhrase = function () {
-        var _this = this;
-        document.getElementById("getMotivated").disabled = true;
-        setTimeout(function () {
-            _this.removeMotivationalPhrase();
-            if (_this.motivational_phrase != "") {
-                _this.changeMotivationalPhrase();
-            }
-            else {
-                var newPhrase = _this.phrases[Math.floor(Math.random() * _this.phrases.length)];
-                setTimeout(function () {
-                    _this.addMotivationalPhrase(newPhrase);
-                }, 1000);
-            }
-        }, 50);
-    };
     CoverPageComponent.prototype.addMotivationalPhrase = function (phrase) {
         var _this = this;
         var func = setTimeout(function () {
@@ -218,8 +197,61 @@ var CoverPageComponent = /** @class */ (function () {
             }
         }, 50);
     };
+    CoverPageComponent.prototype.addMotivationalAuthor = function (author) {
+        var _this = this;
+        var func = setTimeout(function () {
+            if (author != "") {
+                _this.motivational_author += author.substring(0, 1);
+                var newAuthor = author.substring(1);
+                _this.addMotivationalAuthor(newAuthor);
+            }
+        }, 50);
+    };
+    CoverPageComponent.prototype.changeMotivationalPhrase = function () {
+        var _this = this;
+        document.getElementById("getMotivated").disabled = true;
+        setTimeout(function () {
+            _this.removeMotivationalAuthor();
+            _this.removeMotivationalPhrase();
+            if (_this.motivational_phrase != "") {
+                _this.changeMotivationalPhrase();
+            }
+            else {
+                _this.replaceQuote();
+            }
+        }, 50);
+    };
+    CoverPageComponent.prototype.removeMotivationalAuthor = function () {
+        this.motivational_author = this.motivational_author.substring(0, this.motivational_author.length - 1);
+    };
     CoverPageComponent.prototype.removeMotivationalPhrase = function () {
         this.motivational_phrase = this.motivational_phrase.substring(0, this.motivational_phrase.length - 1);
+    };
+    CoverPageComponent.prototype.replaceQuote = function () {
+        var website = this;
+        jquery__WEBPACK_IMPORTED_MODULE_1__["ajax"]({
+            url: 'https://api.forismatic.com/api/1.0/',
+            type: 'GET',
+            jsonp: 'jsonp',
+            dataType: 'jsonp',
+            data: {
+                method: 'getQuote',
+                lang: 'en',
+                format: 'jsonp',
+            },
+            success: function (quote) {
+                var newPhrase = quote.quoteText;
+                var newAuthor;
+                if (quote.quoteAuthor != "") {
+                    newAuthor = "-" + quote.quoteAuthor;
+                }
+                else {
+                    newAuthor = "-Unknown";
+                }
+                website.addMotivationalPhrase(newPhrase);
+                website.addMotivationalAuthor(newAuthor);
+            }
+        });
     };
     CoverPageComponent = __decorate([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
